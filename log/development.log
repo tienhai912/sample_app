@@ -5,3 +5,10 @@ Processing by ApplicationController#hello as HTML
 Completed 200 OK in 98ms (Views: 2.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-28 09:07:27 +0700
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 247ms (Views: 3.4ms)
+
+

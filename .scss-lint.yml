@@ -6,17 +6,17 @@ exclude:
   - 'vendor/assets/**'
 linters:
   ImportantRule:
-    enabled: false
+    enabled: true
   MergeableSelector:
-    enabled: false
+    enabled: true
   UrlFormat:
-    enabled: false
+    enabled: true
   StringQuotes:
     enabled: true
     style: double_quotes
   IdSelector:
     enabled: true
   NestingDepth:
-    enabled: false
+    enabled: true
   SelectorDepth:
-    enabled: false
+    enabled: true

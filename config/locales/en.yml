@@ -61,6 +61,7 @@ en:
   rails_link": "http://www.railstutorial.org/"
   rails_png: "rails.png"
   rails_sample_app: "Ruby on Rails Tutorial Sample App"
+  remember_me: "Remember me on this computer"
   sample_app: "Sample App"
   sample_app_2: "sample app"
   sample_app_3: "Welcome to the Sample App"

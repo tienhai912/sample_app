@@ -1,2 +1,4 @@
 IrresponsibleModule:
   enabled: false
+TooManyMethods:
+  max_methods: 20

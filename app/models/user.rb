@@ -4,6 +4,7 @@ class User < ApplicationRecord
   attr_reader :remember_token, :activation_token, :reset_token
 
   has_secure_password
+  has_many :microposts, dependent: :destroy
 
   validates :name, presence: true,
     length: {maximum: Settings.user.name_max_length}
@@ -79,6 +80,10 @@ class User < ApplicationRecord
 
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+
+  def feed
+    microposts.desc_order
   end
 
   private

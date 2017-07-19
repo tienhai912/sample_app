@@ -4,5 +4,6 @@ user:
   email_max_length: 255
   default_gravatar_size: 80
   gravatar_size: 50
+  small_gravatar_size: 30
 micropost:
   max_length: 140

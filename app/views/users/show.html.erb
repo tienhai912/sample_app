@@ -7,12 +7,17 @@
         <%= @user.name %>
       </h1>
     </section>
+    <section class="stats">
+      <%= render "shared/stats", user: @user %>
+    </section>
   </aside>
   <div class="col-md-8">
+    <%= render "follow_form", user: @user, build: @build,
+      destroy: @destroy if logged_in? %>
     <% if @user.microposts.any? %>
       <h3><%= t "microposts" %> (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
-        <%= render @microposts, current_user: current_user %>
+        <%= render @microposts %>
       </ol>
       <%= will_paginate @microposts %>
     <% end %>

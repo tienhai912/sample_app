@@ -8,6 +8,12 @@ class Micropost < ApplicationRecord
   validate :picture_size
 
   scope :desc_order, -> {order created_at: :desc}
+  scope :home_feed, -> user do
+    following_ids = "SELECT followed_id FROM relationships
+      WHERE  follower_id = :user_id"
+    where("user_id IN (#{following_ids})
+      OR user_id = :user_id", user_id: user.id)
+  end
 
   private
   def picture_size

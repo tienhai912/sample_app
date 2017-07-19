@@ -25,6 +25,9 @@ class UsersController < ApplicationController
 
   def show
     @microposts = user.microposts.desc_order.paginate page: params[:page]
+    active_relationship = current_user.active_relationships
+    @build = active_relationship.build
+    @destroy = active_relationship.find_by followed_id: user.id
   end
 
   def edit; end
